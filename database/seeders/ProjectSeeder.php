@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
+namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,8 +22,8 @@ class ProjectSeeder extends Seeder
         for ($i=0; $i < 10; $i++) {
             $newProject = new Project();
             $newProject->name = $faker->word();
-            $newProject->description = $faker->text(200);
-            $newProject->image = 'https://picsum.photos/200';
+            $newProject->description = $faker->paragraphs(4, true);
+            $newProject->image = "https://picsum.photos/id/" . rand(0, 1084) . "/200";
             $newProject->link = $faker->url();
 
             $stacks = '';
