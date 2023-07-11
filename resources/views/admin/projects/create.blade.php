@@ -18,7 +18,7 @@
         </div>
         @endif
 
-        <form action="{{ route("admin.projects.store") }}" method="POST" class="needs-validation">
+        <form action="{{ route("admin.projects.store") }}" method="post" class="needs-validation">
             @csrf
 
             <label for="name">Name</label>
@@ -59,9 +59,9 @@
 
             <label for="stack">Stack</label>
             <select id="stack" name="stack" class="form-select mb-4" aria-label="Select">
-                <option selected disabled>Select Main Stack</option>
+                <option value="" @selected(!old('stack')) disabled disabled>Select Stack</option>
                 @foreach ($allStack as $item)
-                    <option value="{{ $item->stack }}">{{ $item->stack }}</option>
+                    <option value="{{ $item->stack }}" @selected(old('stack')==$item->stack)>{{ $item->stack }}</option>
                 @endforeach
             </select>
             @error('stack')

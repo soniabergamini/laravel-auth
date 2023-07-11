@@ -66,7 +66,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $allStack = Project::select('stack')->distinct()->get();
+        return view('admin.projects.edit', compact('project', 'allStack'));
     }
 
     /**
@@ -78,7 +79,10 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $data = $request->validated();
+        $project->fill($data);
+        $project->update();
+        return redirect()->route('admin.projects.show', $project);
     }
 
     /**
