@@ -6,7 +6,7 @@
  @section('content')
  <div class="container-fluid mt-4">
     <div class="w-100 text-white bg-dark bg-gradient text-center py-2 rounded mb-4">
-        <h2><i class="fa-brands fa-codepen fa-lg me-3"></i>ALL PROJECTS</h2>
+        <h2><i class="fa-solid fa-laptop-code fa-lg me-3"></i>ALL PROJECTS</h2>
     </div>
     <div class="w-100 text-primary text-end py-2 border-bottom mb-4">
         <a href="{{ route('admin.projects.create') }}"><i class="fa-solid fa-folder-plus me-2"></i>ADD</a>
