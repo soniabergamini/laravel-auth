@@ -30,7 +30,7 @@ class StoreProjectRequest extends FormRequest
             'image' => 'nullable|url|min:5|max:100',
             'link' => 'required|url|min:2|max:200',
             'stack' => 'required|min:2|max:150',
-            'date' => 'required'
+            'date' => 'required|date'
         ];
     }
 }

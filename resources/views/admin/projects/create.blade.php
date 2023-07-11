@@ -22,22 +22,40 @@
             @csrf
 
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" value="{{ old("name") }}" class="form-control mb-4">
+            <input type="text" name="name" id="name" value="{{ old("name") }}" class="form-control mb-4 @error('name') is-invalid @enderror">
+            @error('name')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <label for="domain">Domain</label>
-            <input type="text" name="domain" id="domain" value="{{ old("domain") }}" class="form-control mb-4">
+            <input type="text" name="domain" id="domain" value="{{ old("domain") }}" class="form-control mb-4 @error('domain') is-invalid @enderror">
+            @error('domain')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <label for="link">URL Link</label>
-            <input type="text" name="link" id="link" value="{{ old("link") }}" class="form-control mb-4">
+            <input type="text" name="link" id="link" value="{{ old("link") }}" class="form-control mb-4 @error('link') is-invalid @enderror">
+            @error('link')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <label for="description">Description</label>
-            <textarea name="description" id="description" cols="30" rows="10" class="form-control mb-4">{{ old("description") }}</textarea>
+            <textarea name="description" id="description" cols="30" rows="10" class="form-control mb-4 @error('description') is-invalid @enderror">{{ old("description") }}</textarea>
+            @error('description')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <label for="image">URL Image</label>
-            <input type="text" name="image" id="image" value="{{ old("image") }}" class="form-control mb-4">
+            <input type="text" name="image" id="image" value="{{ old("image") }}" class="form-control mb-4 @error('image') is-invalid @enderror">
+            @error('image')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <label for="date">Release Date</label>
-            <input type="date" name="date" id="date" value="{{ old("date") }}" class="form-control mb-4">
+            <input type="date" name="date" id="date" value="{{ old("date") }}" class="form-control mb-4 @error('date') is-invalid @enderror">
+            @error('date')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <label for="stack">Stack</label>
             <select id="stack" name="stack" class="form-select mb-4" aria-label="Select">
@@ -46,6 +64,9 @@
                     <option value="{{ $item->stack }}">{{ $item->stack }}</option>
                 @endforeach
             </select>
+            @error('stack')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
 
             <input type="submit" class="btn btn-primary form-control mb-4" value="ADD PROJECT">
 
