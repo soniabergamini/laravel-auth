@@ -22,6 +22,7 @@ class ProjectSeeder extends Seeder
         for ($i=0; $i < 10; $i++) {
             $newProject = new Project();
             $newProject->name = $faker->word();
+            $newProject->domain = $faker->domainName();
             $newProject->description = $faker->paragraphs(4, true);
             $newProject->image = "https://picsum.photos/id/" . rand(0, 1084) . "/200";
             $newProject->link = $faker->url();
@@ -35,6 +36,7 @@ class ProjectSeeder extends Seeder
             }
 
             $newProject->stack = $stacks;
+            $newProject->date = $faker->dateTimeBetween('-2 years');
             // $newProject->stack = $faker->randomElements(['HTML', 'CSS', 'JS', 'PHP', 'LARAVEL', 'VITE', 'VUEJS'], 4);
             $newProject->save();
         }

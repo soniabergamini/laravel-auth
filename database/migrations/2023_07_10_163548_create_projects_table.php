@@ -17,10 +17,12 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name', 30);
+            $table->string('domain', 100);
             $table->text('description');
             $table->string('image', 100);
             $table->string('link', 200);
             $table->string('stack', 150);
+            $table->dateTime('date');
         });
     }
 
