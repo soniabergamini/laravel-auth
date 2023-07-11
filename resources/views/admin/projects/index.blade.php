@@ -27,7 +27,6 @@
  			    	<div class="card-body text-center">
  			    		<h6 class="text-primary mb-1">{{ Str::upper($item->name) }}</h6>
                         <span class="text-body-secondary fst-italic">( {{ $item->stack }} )</span>
-                        {{-- <p class="text-body-secondary mt-3">{{ $item->description }}</p> --}}
  			    	</div>
  			    </div>
  		    </div>
