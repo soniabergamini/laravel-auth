@@ -42,7 +42,7 @@
 </div>
 
 <div class="px-5 py-2 my-4 bg-light rounded-3">
-    <div class="container py-5 text-center">
+    <div class="container text-center">
         <h1 class="display-5 fw-bold pb-2">Welcome to Boolfolio</h1>
         <p class="col-12 fs-5 px-5 pb-2">Explore all projects Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iusto, tenetur unde tempore fugiat nobis aliquid quibusdam eveniet sed placeat veritatis ullam tempora! Bootstrap 5 views for laravel projects including laravel breeze/blade.</p>
         <a href="{{ route('login') }}" class="btn btn-primary btn-lg" type="button"><i class="fa-solid fa-user pe-2"></i>{{ __('Login') }}</a>
