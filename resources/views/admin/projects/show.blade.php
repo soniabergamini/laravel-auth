@@ -18,7 +18,7 @@
                         <a href="{{ $project->link }}" class="fs-6 bg-dark bg-gradient bg-opacity-50 position-absolute link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover top-0 end-0 rounded py-1 px-2">Visit Site <i class="fa-solid fa-square-arrow-up-right ms-1"></i></a>
                     </div>
                 </div>
- 		    	<div class="d-flex flex-column ps-4 pe-5 my-4 w-50 border-start">
+ 		    	<div class="d-flex flex-column justify-content-center ps-4 pe-5 my-4 w-50 border-start">
                     <p class="mb-2"><strong>Domain:</strong><span class="text-body-secondary"> {{ $project->domain }}</span></p>
                     <p class="mb-2"><strong>Stack:</strong><span class="text-body-secondary"> {{ $project->stack }}</span></p>
                     <p class="mb-2"><strong>Project Abstract: </strong><span class="text-body-secondary">{{ $project->description }}</span></p>
